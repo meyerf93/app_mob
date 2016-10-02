@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <shape xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:shape="oval"
+     tools:ignore="UnusedResources">
+        <corners android:radius="1000dp" />
+        <solid android:color="@color/colorBtnMapFragment" />
+        <stroke
+            android:width="2dip"
+            android:color="@color/colorBtnMapFragmentArround" />
+        <padding
+            android:bottom="4dp"
+            android:left="4dp"
+            android:right="4dp"
+            android:top="4dp" />
+</shape>

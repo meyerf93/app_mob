@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lin_lay_det_b"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBeaconDetailsBackground">
+
+    <TextView
+        android:id="@+id/beacon_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/beacon_name_text_size"/>
+    <TextView
+        android:id="@+id/beacon_ligne_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/beacon_ligne_1_text_size"
+        android:layout_marginStart="@dimen/beacon_ligne_margin_left"/>
+    <TextView
+        android:id="@+id/beacon_ligne_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/beacon_ligne_1_text_size"
+        android:layout_marginStart="@dimen/beacon_ligne_margin_left"/>
+    <TextView
+        android:id="@+id/beacon_ligne_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/beacon_ligne_1_text_size"
+        android:layout_marginStart="@dimen/beacon_ligne_margin_left"/>
+    <TextView
+        android:id="@+id/beacon_ligne_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/beacon_ligne_1_text_size"
+        android:layout_marginStart="@dimen/beacon_ligne_margin_left"/>
+    <TextView
+        android:id="@+id/beacon_ligne_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/beacon_ligne_1_text_size"
+        android:layout_marginStart="@dimen/beacon_ligne_margin_left"/>
+    <TextView
+        android:id="@+id/beacon_ligne_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/beacon_ligne_1_text_size"
+        android:layout_marginStart="@dimen/beacon_ligne_margin_left"/>
+    <TextView
+        android:id="@+id/beacon_ligne_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/beacon_ligne_1_text_size"
+        android:layout_marginStart="@dimen/beacon_ligne_margin_left"/>
+</LinearLayout>

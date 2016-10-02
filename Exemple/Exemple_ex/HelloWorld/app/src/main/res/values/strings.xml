@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HelloWorld</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hello_format">%1$s !</string>
+    <string name="display_button">Display</string>
+    <string name="person_name" />
+    <string name="label_name">Enter your name:   </string>
+    <string name="clear_button">Clear</string>
+
+</resources>

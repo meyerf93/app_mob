@@ -1,0 +1,31 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="length_size">200dp</dimen>
+    <dimen name="circle_btn_size">100dp</dimen>
+    <dimen name="circle_btn_size_land">130dp</dimen>
+    <dimen name="circle_btn_size_port">100dp</dimen>
+    <dimen name="map_fragment_margin">10dp</dimen>
+
+    <dimen name="clue_name_text_size">40sp</dimen>
+    <dimen name="clue_ligne_1_text_size">20sp</dimen>
+    <dimen name="clue_ligne_2_text_size">20sp</dimen>
+    <dimen name="clue_ligne_3_text_size">20sp</dimen>
+    <dimen name="clue_ligne_margin_left">20dp</dimen>
+    <dimen name="overview_clue_fragment_margin">10dp</dimen>
+
+    <dimen name="beacon_name_text_size">40sp</dimen>
+    <dimen name="beacon_ligne_1_text_size">20sp</dimen>
+    <dimen name="beacon_ligne_2_text_size">20sp</dimen>
+    <dimen name="beacon_ligne_3_text_size">20sp</dimen>
+    <dimen name="beacon_ligne_margin_left">20dp</dimen>
+    <dimen name="overview_beacon_fragment_margin">10dp</dimen>
+
+    <dimen name="message_text_size">40sp</dimen>
+    <dimen name="explain_text_size">25sp</dimen>
+    <dimen name="margin">15dp</dimen>
+    <dimen name="button_text_size">20sp</dimen>
+
+</resources>

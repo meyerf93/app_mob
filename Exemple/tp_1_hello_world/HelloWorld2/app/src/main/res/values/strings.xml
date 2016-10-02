@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="button_text">Display</string>
+    <string name="text_view">Hello World!</string>
+    <string name="label_text">Hello</string>
+    <string name="button_clr">Clear</string>
+</resources>

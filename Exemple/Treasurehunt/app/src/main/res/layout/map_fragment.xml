@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map_frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainScreenActivity">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/scan_btn"
+                android:layout_width="@dimen/circle_btn_size"
+                android:layout_height="@dimen/circle_btn_size"
+                android:background="@drawable/btn_scan_screen"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/map_fragment_margin"
+                android:onClick="onScanClicked"
+                android:text="@string/text_scan_btn"/>
+            <Button
+                android:id="@+id/overview_beacon_btn"
+                android:layout_width="@dimen/circle_btn_size"
+                android:layout_height="@dimen/circle_btn_size"
+                android:background="@drawable/btn_beacon_screen"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/text_beacon_btn"
+                android:onClick="onBeaconClicked"
+                android:layout_margin="@dimen/map_fragment_margin"/>
+            <Button
+                android:id="@+id/overview_clue_btn"
+                android:layout_width="@dimen/circle_btn_size"
+                android:layout_height="@dimen/circle_btn_size"
+                android:background="@drawable/btn_main_screen"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/map_fragment_margin"
+                android:onClick="onClueClicked"
+                android:text="@string/text_clue_btn"
+                tools:ignore="RtlHardcoded" />
+            <Button
+                android:id="@+id/step_button"
+                android:layout_width="@dimen/circle_btn_size"
+                android:layout_height="@dimen/circle_btn_size"
+                android:background="@drawable/btn_main_screen"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/map_fragment_margin"
+                android:text="@string/text_step_counter"
+                tools:ignore="RtlHardcoded" />
+        </RelativeLayout>
+    </fragment>
+
+</RelativeLayout>

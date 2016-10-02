@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark" tools:ignore="UnusedResources">#303F9F</color>
+    <color name="colorAccent" tools:ignore="UnusedResources">#FF4081</color>
+
+    <color name="colorBtnMapFragment">#efb508</color>
+    <color name="colorBtnMapFragmentArround">#112a61</color>
+
+    <color name="colorBtnBeacon" tools:ignore="UnusedResources">#35830f</color>
+    <color name="colorBtnBeaconArround">#112a61</color>
+
+    <color name="colorBtnClue" tools:ignore="UnusedResources">#65a1ec</color>
+    <color name="colorBtnClueArround">#112a61</color>
+
+    <color name="colorClueDetailsBackground">#ead8b2</color>
+    <color name="colorBeaconDetailsBackground">#ead8b2</color>
+
+    <color name="helpBacground">#EAD8B2</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="grey" tools:ignore="UnusedResources">#cfcfcf</color>
+
+    <color name="beaconGreen">#6aa84f</color>
+    <color name="beaconOrange">#ff9900</color>
+    <color name="beaconRed">#cc0000</color>
+
+    <color name="scanActive">#6fa8dc</color>
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">30dp</dimen>
+    <dimen name="activity_vertical_margin">30dp</dimen>
+    <dimen name="magin_views">15dp</dimen>
+    <!-- size of message text-->
+    <dimen name="message_text_size">20sp</dimen>
+    <dimen name="label_size">20sp</dimen>
+    <dimen name="button_size">20sp</dimen>
+    <!-- size of the edit text-->
+    <dimen name="edit_text_size">100sp</dimen>
+
+</resources>

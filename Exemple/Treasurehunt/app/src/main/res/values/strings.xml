@@ -1,0 +1,57 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Treasure hunt</string>
+    <string name="welcome_msg">Welcome to treasure hunt</string>
+    <string name="start_button">Start</string>
+    <string name="load_button">Load</string>
+    <string name="help_button">Help</string>
+    <string name="slot1">Empty Slot</string>
+    <string name="slot2">Empty Slot</string>
+    <string name="slot3">Empty Slot</string>
+
+    <!-- part concerning the map_fragment layout-->
+    <string name="text_clue_btn">clue</string>
+    <string name="text_scan_btn">scan</string>
+    <string name="text_beacon_btn">beacon</string>
+    <string name="text_step_counter">step</string>
+
+    <!-- part concerning the activity labelmap_fragment layout-->
+    <string name="label_overview_beacon">OverviewBeacon</string>
+    <string name="label_overview_clue">OverviewClue</string>
+    <string name="label_main_screen">MainScreen</string>
+    <string name="label_menu_screen">MenuScreen</string>
+    <string name="label_help_screen">HelpScreen</string>
+
+    <string name="clue_ligne_1_text">dark</string>
+
+    <string name="beacon_ligne_1_text">UUID : </string>
+    <string name="beacon_ligne_2_text">Major : </string>
+    <string name="beacon_ligne_3_text">Minor : </string>
+    <string name="beacon_ligne_4_text">Pow : </string>
+    <string name="beacon_ligne_5_text">Dist : </string>
+    <string name="beacon_ligne_6_text">Step : </string>
+    <string name="beacon_ligne_7_text">Position : </string>
+
+    <string name="overview_clue_frag_1_text">First Clue</string>
+    <string name="overview_clue_frag_2_text">Library Clue</string>
+    <string name="overview_clue_frag_3_text">Audit Clue</string>
+    <string name="overview_clue_frag_4_text">Last Clue</string>
+
+    <string name="overview_beacon_frag_1_text">First beacon</string>
+    <string name="overview_beacon_frag_2_text">Library beacon</string>
+    <string name="overview_beacon_frag_3_text">Audit beacon</string>
+    <string name="overview_beacon_frag_4_text">Last beacon</string>
+
+    <string name="cont_button">Continue</string>
+    <string name="new_button">New game</string>
+
+    <string name="permission_explanation">You need to allow the Localisation !</string>
+    <string name="permission_bt">You need to activate the bluetooth !</string>
+
+    <string name="dialog_message">default</string>
+    <string name="dialog_btn">OK</string>
+
+    <string name="help_string">The goal of the game is to find different beacons hidden inside the school.\nTo start a new game, just press start. To continue a previously started game, press continue.\nTo help you find a beacon, you can press the clue button.\nWhen you think you are in the right area, you can press the scan button to search for beacons.\nTo consult the list of the beacons you already found, you can press the beacon button.</string>
+
+    <string name="no_beacon">No beacon found yet !</string>
+
+</resources>

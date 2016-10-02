@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">LaunchActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="address_label">Address: </string>
+    <string name="send">Send</string>
+    <string name="downloadWithTask">Download with task</string>
+    <string name="downloadWithTaskFragment">Using fragment</string>
+    <string name="downloadWithService">Using service</string>
+    <string name="download_not_started">Download not started</string>
+    <string name="download_started">Download started</string>
+    <string name="download_done">Download done</string>
+    <string name="download_cancelled">Download cancelled</string>
+    <string name="launch_simple_up_button">Start simple up activity</string>
+    <string name="start_service">Start service</string>
+    <string name="stop_service">Stop service</string>
+    <string name="title_activity_simple_up">SimpleUpActivity</string>
+    <string name="permission_explanation">You need to allow write to external storage !</string>
+    <string name="title_activity_android_version">AndroidVersionActivity</string>
+    <string name="launch_android_version_button">Start Android version activity</string>
+    <string name="android_os_name">Android OS name</string>
+    <string name="android_version">Android version</string>
+    <string name="title_activity_map_fragment">AndroidMapFragment</string>
+    <string name="launch_map_fragment_button">Start Map fragment activity</string>
+
+</resources>

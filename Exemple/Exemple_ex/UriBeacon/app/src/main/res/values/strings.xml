@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UriBeacon</string>
+    <string name="text_flags">Waiting for beacon detection</string>
+    <string name="text_power">0 dBm</string>
+    <string name="text_url">No URL</string>
+    <string name="permission_bt">You need to activate the bluetooth !</string>
+</resources>

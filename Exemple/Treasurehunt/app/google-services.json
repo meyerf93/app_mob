@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "461572818945",
+    "project_id": "treasurehunt-552b3"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:461572818945:android:8fcbcd195a7dbfa1",
+        "android_client_info": {
+          "package_name": "ch.heia.mobiledev.treasurehunt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "461572818945-grgou2vav5sdn3gfp9pp885qq72207re.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ch.heia.mobiledev.treasurehunt",
+            "certificate_hash": "C7EAB665C551A6E4444E5890947C9039A818AB03"
+          }
+        },
+        {
+          "client_id": "461572818945-t152inou44jmvioj5g3ud4tj7ib8mlv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdqKSkLxQaGFLVEFiLjoQKOS5ce8DATAw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

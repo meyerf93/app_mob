@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorClueDetailsBackground">
+
+    <TextView
+        android:id="@+id/clue_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/clue_name_text_size"/>
+    <TextView
+        android:id="@+id/clue_ligne_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/clue_ligne_1_text_size"
+        android:layout_marginStart="@dimen/clue_ligne_margin_left"/>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="horizontal"
+              android:baselineAligned="false">
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        class="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <fragment
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="0.5"
+        class="ch.heia.mobiledev.launchactivity.LocationListFragment"
+        android:id="@+id/location_list_fragment"/>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/text_view"
+       android:textSize="@dimen/size_height_tx"/>
+   <EditText
+       android:layout_width="@dimen/size_text_box"
+       android:layout_height="@dimen/size_height_tx"
+       android:id="@+id/edit_text"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/send_bt"
+        android:text="@string/button_text"
+        android:textSize="@dimen/size_height_tx"/>
+    <!-- bouton pour le capteur de lux -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLight"/>
+    <!-- Bouton pour le download-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDownload"
+        android:text="@string/bt_download"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnStartService"
+        android:onClick="onStartService"/>
+
+    <!--  service wait
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="StartService"
+        android:id="@+id/btnStartService"
+        android:onClick="onStartService" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="StopService"
+        android:id="@+id/btnStopService"
+        android:onClick="onStopService"/>-->
+
+</LinearLayout>
