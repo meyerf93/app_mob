@@ -3,4 +3,13 @@
     <string name="action_settings">Settings</string>
     <string name="list_text">Nom de la version : </string>
     <string name="list_number">Numéro de la version : </string>
+    <string name="action_add">Ajouter un élément</string>
+    <string name="action_modify">Modifier un élément</string>
+    <string name="action_search">Rercher un élément</string>
+    <string-array name="menu_items">
+        <item>Simple list</item>
+        <item>Custom list</item>
+        <item>list3</item>
+        <item>list4</item>
+    </string-array>
 </resources>
