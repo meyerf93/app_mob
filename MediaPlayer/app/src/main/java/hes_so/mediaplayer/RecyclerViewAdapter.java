@@ -35,7 +35,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_song, parent, false);
+        View v = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.custom_song, parent, false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
@@ -46,6 +47,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.songTitle.setText(slm.getTitle(position));
         if (slm.getArtwork(position) !=null){
             holder.artwork.setImageBitmap(slm.getArtwork(position));
+        }else {
+            holder.artwork.setImageResource(R.mipmap.ic_music);
         }
     }
 

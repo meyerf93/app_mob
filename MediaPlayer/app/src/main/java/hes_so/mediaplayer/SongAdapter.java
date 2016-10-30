@@ -2,9 +2,6 @@ package hes_so.mediaplayer;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
-import android.text.AndroidCharacter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,15 +34,31 @@ public class SongAdapter extends ArrayAdapter<Song>{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
-        //RecyclerViewAdapter.ViewHolder holder;
+        ViewHolder holder;
         if(view == null){
             LayoutInflater layoutInflater = (LayoutInflater)
                     context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-            //holder = new RecyclerViewAdapter.ViewHolder();
-            //holder.songTitle = (TextView) view.findViewById(R.id.song_tittle);
-            //holder.artwork = (ImageView) view.findViewById(R.id.artwork);
-            //holder.artisName = (TextView) view.findViewById(R.id.artist_name);
             view = layoutInflater.inflate(viewRes,parent,false);
+
+            holder = new ViewHolder();
+            holder.title = (TextView) view.findViewById(R.id.song_tittle);
+            holder.artwork = (ImageView) view.findViewById(R.id.artwork);
+            holder.description = (TextView) view.findViewById(R.id.artist_name);
+
+            //Assigne notre view holder à la view
+            view.setTag(holder);
+        } else {
+            holder = (ViewHolder) view.getTag();
+        }
+
+        holder.title.setText(slm.getTitle(position));
+        holder.description.setText(slm.getArtist(position));
+
+
+        if (slm.getArtwork(position) != null){
+            holder.artwork.setImageBitmap(slm.getArtwork(position));
+        }else{
+            holder.artwork.setImageResource(R.mipmap.ic_music);
         }
 
         return view;
@@ -55,11 +68,12 @@ public class SongAdapter extends ArrayAdapter<Song>{
         return slm.getPlayListLength();
     }
 
-    /*private viewHolder {
 
-    }*/
-
-
+    static class ViewHolder {
+        TextView title;
+        TextView description;
+        ImageView artwork;
+    }
 }
 
 

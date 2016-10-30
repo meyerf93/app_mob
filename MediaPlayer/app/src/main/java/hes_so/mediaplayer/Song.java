@@ -12,6 +12,13 @@ public class Song {
     private String album;
     private Bitmap artwork;
 
+    public Song(String songTitle, String artist_Name, String album, Bitmap artwork){
+        this.songTitle = songTitle;
+        this.artist_Name = artist_Name;
+        this.album = album;
+        this.artwork = artwork;
+    }
+
     public String getSongTitle() {
         return songTitle;
     }
