@@ -5,9 +5,11 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.provider.ContactsContract;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -34,8 +36,8 @@ public class PlayerActivity extends AppCompatActivity{
     private String timeFormat = "mm:ss"; // 12:00
     private TextView timeSong;
     private TextView endSong;
-    private Thread update;
-    private boolean updateTime = true;
+    /*private Thread update;
+    private boolean updateTime = true;*/
 
     private boolean Play = true;
     private boolean Pause = false;
@@ -47,7 +49,7 @@ public class PlayerActivity extends AppCompatActivity{
     private ImageButton play_button;
     private ImageButton next_button;
 
-    @Override
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Lie le layout à l'activité
@@ -101,10 +103,10 @@ public class PlayerActivity extends AppCompatActivity{
 
             public void onStopTrackingTouch(SeekBar seekBar) {
                 mediaplayer.seekTo(displayTime.getProgress());
-                updateTime();
+                //updateTime();
             }
         });
-
+/*
         update = new Thread() {
 
             @Override
@@ -126,9 +128,15 @@ public class PlayerActivity extends AppCompatActivity{
             }
         };
 
-        update.start();
+        update.start();*/
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        onBackPressed();
+
+    }
 
     private void initFields(){
         album_art = (ImageView) findViewById(R.id.player_album_art);
@@ -162,24 +170,24 @@ public class PlayerActivity extends AppCompatActivity{
 
     @Override
     public void onBackPressed() {
-
-        mediaplayer.stop();
+        /*
         update.interrupt();
         try {
             update.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
         mediaplayer.stop();
+        mediaplayer.release();
         finish();
     }
 
-    public void updateTime(){
+    /*public void updateTime(){
         int time = mediaplayer.getCurrentPosition();
 
         timeSong.setText(DateFormat.format(timeFormat, time));
         displayTime.setProgress(time);
-    }
+    }*/
 
     private void setListenerToButton() {
         /******************************
@@ -245,6 +253,7 @@ public class PlayerActivity extends AppCompatActivity{
         });
     }
 
+
     public void playSong(int songIndex){
         setSongInfo(songIndex);
 
@@ -281,7 +290,7 @@ public class PlayerActivity extends AppCompatActivity{
 
         endSong.setText(DateFormat.format(timeFormat,mediaplayer.getDuration()));
         displayTime.setMax(mediaplayer.getDuration());
-        updateTime();
+        //updateTime();
     }
 
 }

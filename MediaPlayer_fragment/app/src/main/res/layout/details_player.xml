@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="2"
+    android:background="@color/colorPlayerBackground"
+    android:weightSum="3">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/player_time_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:textSize="20sp"
+            android:text="00:00"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/player_time_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:textSize="20sp"
+            android:text="01:00"
+            android:layout_weight="1"
+            android:textAlignment="viewEnd"/>
+
+    </LinearLayout>
+
+    <SeekBar
+        style="@android:style/Widget.Material.Light.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/previousButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorPlayerBackground" />
+
+        <ImageButton
+            android:id="@+id/stopButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorPlayerBackground" />
+
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorPlayerBackground" />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/colorPlayerBackground" />
+    </LinearLayout>
+
+</LinearLayout>
