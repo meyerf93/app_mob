@@ -10,7 +10,7 @@
         android:id="@+id/left_list_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_weight="1"/>
 
     <FrameLayout
         android:id="@+id/main_ui_fragment"
@@ -21,5 +21,5 @@
         android:id="@+id/right_list_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_weight="1"/>
 </LinearLayout>

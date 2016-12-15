@@ -3,11 +3,10 @@
     android:id="@+id/activity_green_living_port"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:weightSum="1">
+    android:layout_height="match_parent">
+
     <FrameLayout
         android:id="@+id/main_fragment"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_height="match_parent"/>
  </LinearLayout>
