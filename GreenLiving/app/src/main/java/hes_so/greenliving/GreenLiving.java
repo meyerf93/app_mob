@@ -1,10 +1,10 @@
 package hes_so.greenliving;
 
 import android.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
-public class GreenLiving extends AppCompatActivity implements
+public class GreenLiving extends FragmentActivity implements
         LeftListFragment.OnLeftListFragmentInteractionListener,
         MainUIFragment.OnMainUIFragmentInteractionListenerListener,
         RightListFragment.OnRightListFragmentInteractionListener {
@@ -14,8 +14,10 @@ public class GreenLiving extends AppCompatActivity implements
     private boolean MiddleUIFragment = false;
 
     private LeftListFragment leftListFragment;
-    private MainUIFragment mainUIFragment;
-    private RightListFragment rightListFragment;
+    private LeftListFragment middleFragment;
+    private LeftListFragment rifthFragment;
+    /*private MainUIFragment mainUIFragment;
+    private RightListFragment rightListFragment;*/
 
     private FragmentManager fragmentManager;
 
@@ -30,10 +32,17 @@ public class GreenLiving extends AppCompatActivity implements
 
         leftListFragment = new LeftListFragment();
 
-        mainUIFragment = new MainUIFragment();
+        middleFragment = new LeftListFragment();
 
-        rightListFragment = new RightListFragment();
 
+        rifthFragment = new LeftListFragment();
+
+        fragmentManager.beginTransaction()
+                .add(R.id.left_list_fragment,leftListFragment).commit();
+        fragmentManager.beginTransaction()
+                .add(R.id.main_ui_fragment,middleFragment).commit();
+        fragmentManager.beginTransaction()
+                .add(R.id.right_list_fragment,rifthFragment).commit();
 
     }
 

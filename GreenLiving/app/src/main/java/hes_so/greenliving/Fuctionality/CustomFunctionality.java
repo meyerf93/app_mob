@@ -16,9 +16,10 @@ public class CustomFunctionality {
     private Bitmap functPicture;
     private ArrayList<CustomSubFunctionality> subFunctList;
 
-    public CustomFunctionality(String functName, Bitmap functPicture){
+    public CustomFunctionality(String functName, Bitmap functPicture,ArrayList<CustomSubFunctionality> subFunctList){
         this.functName = functName;
         this.functPicture = functPicture;
+        this.subFunctList = subFunctList;
     }
 
     //getter/setter
@@ -44,5 +45,9 @@ public class CustomFunctionality {
 
     public ArrayList<CustomSubFunctionality> getSubFunctList() {
         return subFunctList;
+    }
+
+    public void setSubfunclist(ArrayList<CustomSubFunctionality> customSubFunctionalityArrayList){
+        this.subFunctList = customSubFunctionalityArrayList;
     }
 }
