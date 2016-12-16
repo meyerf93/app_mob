@@ -27,6 +27,7 @@ public class LeftListFragment extends Fragment {
     ArrayList<CustomSubFunctionality> customSubFunctionalityArrayList;
     ArrayList<CustomFunctionality> customFunctionalityArrayList;
     ListView left_list;
+    SubFunctionalityAdapter subFunctionalityAdapter;
 
 
 
@@ -60,15 +61,29 @@ public class LeftListFragment extends Fragment {
     private FunctionalityAdapter init_list(){
         //peuple la liste principale
         customFunctionalityArrayList = new ArrayList<CustomFunctionality>();
-        SubFunctionalityAdapter subFunctionalityAdapter = init_sub_list();
+        SubFunctionalityAdapter subFunctionalityAdapter1 = init_sub_list();
         customFunctionalityArrayList.add(new CustomFunctionality(
                 "Electricity",
                 BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_green_batterys),
-                customSubFunctionalityArrayList
+                customSubFunctionalityArrayList,
+                subFunctionalityAdapter1
+        ));
+        SubFunctionalityAdapter subFunctionalityAdapter2 = init_sub_list();
+        customFunctionalityArrayList.add(new CustomFunctionality(
+                "Electricity",
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_red_batterys),
+                customSubFunctionalityArrayList,
+                subFunctionalityAdapter2
+        ));
+        SubFunctionalityAdapter subFunctionalityAdapter3 = init_sub_list();
+        customFunctionalityArrayList.add(new CustomFunctionality(
+                "Electricity",
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_yellow_batterys),
+                customSubFunctionalityArrayList,
+                subFunctionalityAdapter3
         ));
         FunctionalityAdapter functionalityAdapter = new FunctionalityAdapter(getContext(),
-                R.layout.custom_func_cell,customFunctionalityArrayList,
-                subFunctionalityAdapter);
+                R.layout.custom_func_cell,customFunctionalityArrayList);
         return  functionalityAdapter;
     }
 

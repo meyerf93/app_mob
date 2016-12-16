@@ -27,17 +27,16 @@ public class FunctionalityAdapter extends ArrayAdapter<CustomFunctionality> {
     private Context context;
     private int viewRes;
     private Resources res;
-    private SubFunctionalityAdapter subFunctionalityAdapter;
+
 
     public FunctionalityAdapter(Context context, int textViewRessourceId,
-                                ArrayList<CustomFunctionality> funcList,
-                                SubFunctionalityAdapter subFunctionalityAdapter){
+                                ArrayList<CustomFunctionality> funcList){
         super(context,textViewRessourceId,funcList);
         this.funcList = funcList;
         this.context = context;
         this.viewRes = textViewRessourceId;
         this.res = context.getResources();
-        this.subFunctionalityAdapter = subFunctionalityAdapter;
+
     }
 
     @Override
@@ -57,7 +56,7 @@ public class FunctionalityAdapter extends ArrayAdapter<CustomFunctionality> {
             func_button.setImageBitmap(customFunctionality.getFunctPicture());
 
             final ListView sub_func_list = (ListView) view.findViewById((R.id.sub_func_list));
-            sub_func_list.setAdapter(subFunctionalityAdapter);
+            sub_func_list.setAdapter(customFunctionality.getSubFunctionalityAdapter());
 
         }
         return view;

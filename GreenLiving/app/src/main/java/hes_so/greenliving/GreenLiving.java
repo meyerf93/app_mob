@@ -4,10 +4,7 @@ import android.app.FragmentManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
-public class GreenLiving extends FragmentActivity implements
-        LeftListFragment.OnLeftListFragmentInteractionListener,
-        MainUIFragment.OnMainUIFragmentInteractionListenerListener,
-        RightListFragment.OnRightListFragmentInteractionListener {
+public class GreenLiving extends FragmentActivity {
 
     private boolean LeftListFragment = false;
     private boolean RightListFragment = false;
@@ -34,7 +31,6 @@ public class GreenLiving extends FragmentActivity implements
 
         middleFragment = new LeftListFragment();
 
-
         rifthFragment = new LeftListFragment();
 
         fragmentManager.beginTransaction()
@@ -43,21 +39,6 @@ public class GreenLiving extends FragmentActivity implements
                 .add(R.id.main_ui_fragment,middleFragment).commit();
         fragmentManager.beginTransaction()
                 .add(R.id.right_list_fragment,rifthFragment).commit();
-
     }
 
-    @Override
-    public void OnLeftListFragmentInteraction(int index) {
-
-    }
-
-    @Override
-    public void OnMainUIFragmentInteraction(int index) {
-
-    }
-
-    @Override
-    public void OnRightListFragmentInteraction(int index) {
-
-    }
 }

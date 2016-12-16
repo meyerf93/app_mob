@@ -15,11 +15,15 @@ public class CustomFunctionality {
     private String functName;
     private Bitmap functPicture;
     private ArrayList<CustomSubFunctionality> subFunctList;
+    private SubFunctionalityAdapter subFunctionalityAdapter;
 
-    public CustomFunctionality(String functName, Bitmap functPicture,ArrayList<CustomSubFunctionality> subFunctList){
+    public CustomFunctionality(String functName, Bitmap functPicture,
+                               ArrayList<CustomSubFunctionality> subFunctList,
+                               SubFunctionalityAdapter subFunctionalityAdapter){
         this.functName = functName;
         this.functPicture = functPicture;
         this.subFunctList = subFunctList;
+        this.subFunctionalityAdapter = subFunctionalityAdapter;
     }
 
     //getter/setter
@@ -49,5 +53,13 @@ public class CustomFunctionality {
 
     public void setSubfunclist(ArrayList<CustomSubFunctionality> customSubFunctionalityArrayList){
         this.subFunctList = customSubFunctionalityArrayList;
+    }
+
+    public void setSubFunctionalityAdapter(SubFunctionalityAdapter subFunctionalityAdapter) {
+        this.subFunctionalityAdapter = subFunctionalityAdapter;
+    }
+
+    public SubFunctionalityAdapter getSubFunctionalityAdapter() {
+        return subFunctionalityAdapter;
     }
 }
