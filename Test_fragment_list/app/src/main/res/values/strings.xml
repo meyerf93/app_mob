@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Test_fragment_list</string>
+
+    <string-array name="list_example">
+        <item>Bonjour test 1</item>
+        <item>Salut test 2</item>
+        <item>Coucou test 3</item>
+    </string-array>
+
+</resources>
