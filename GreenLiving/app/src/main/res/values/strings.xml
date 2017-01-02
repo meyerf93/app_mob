@@ -2,6 +2,16 @@
     <string name="app_name">Green Living</string>
 
     <string name="title_activity_green_living">GreenLiving</string>
+
+    <string name="func_1">Chauffage</string>
+    <string name="func_2">Isolation</string>
+    <string name="func_3">Production</string>
+    <string name="func_4">Electroménager</string>
+
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+
+
 </resources>

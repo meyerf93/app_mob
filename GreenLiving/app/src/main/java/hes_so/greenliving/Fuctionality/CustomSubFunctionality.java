@@ -9,12 +9,22 @@ import android.graphics.Bitmap;
 public class CustomSubFunctionality {
 
     //parameter for sub functionality
+    private long id;
     private Bitmap subFuncButton;
     private Bitmap subFunctPicture;
 
-    public CustomSubFunctionality(Bitmap subFuncButton, Bitmap subFunctPicture){
+    public CustomSubFunctionality(long id,Bitmap subFuncButton, Bitmap subFunctPicture){
+        this.id = id;
         this.subFuncButton = subFuncButton;
         this.subFunctPicture = subFunctPicture;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public Bitmap getSubFuncButton() {

@@ -1,8 +1,11 @@
 package hes_so.greenliving;
 
+
 import android.app.FragmentManager;
-import android.support.v4.app.FragmentActivity;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+
 
 public class GreenLiving extends FragmentActivity {
 
@@ -26,6 +29,7 @@ public class GreenLiving extends FragmentActivity {
         setContentView(R.layout.activity_green_living);
 
         fragmentManager = getFragmentManager();
+        final FragmentTransaction ft = fragmentManager.beginTransaction();
 
         leftListFragment = new LeftListFragment();
 
@@ -33,12 +37,14 @@ public class GreenLiving extends FragmentActivity {
 
         rifthFragment = new LeftListFragment();
 
-        fragmentManager.beginTransaction()
-                .add(R.id.left_list_fragment,leftListFragment).commit();
-        fragmentManager.beginTransaction()
-                .add(R.id.main_ui_fragment,middleFragment).commit();
-        fragmentManager.beginTransaction()
-                .add(R.id.right_list_fragment,rifthFragment).commit();
+        ft.add(R.id.left_list_fragment,leftListFragment);
+
+        //ft.add(R.id.right_list_fragment,rifthFragment);
+
+        //ft.add(R.id.main_ui_fragment,middleFragment);
+
+        ft.commit();
+
     }
 
 }

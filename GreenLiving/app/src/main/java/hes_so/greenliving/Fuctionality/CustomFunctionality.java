@@ -12,21 +12,28 @@ import java.util.ArrayList;
 public class CustomFunctionality {
 
     //parameter for fuctionality
+    private long id;
     private String functName;
     private Bitmap functPicture;
     private ArrayList<CustomSubFunctionality> subFunctList;
-    private SubFunctionalityAdapter subFunctionalityAdapter;
 
-    public CustomFunctionality(String functName, Bitmap functPicture,
-                               ArrayList<CustomSubFunctionality> subFunctList,
-                               SubFunctionalityAdapter subFunctionalityAdapter){
+    public CustomFunctionality(Long id,String functName, Bitmap functPicture,
+                               ArrayList<CustomSubFunctionality> subFunctList){
+        this.id = id;
         this.functName = functName;
         this.functPicture = functPicture;
         this.subFunctList = subFunctList;
-        this.subFunctionalityAdapter = subFunctionalityAdapter;
     }
 
     //getter/setter
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
+    }
+
     public void setFunctName(String functName) {
         this.functName = functName;
     }
@@ -51,15 +58,4 @@ public class CustomFunctionality {
         return subFunctList;
     }
 
-    public void setSubfunclist(ArrayList<CustomSubFunctionality> customSubFunctionalityArrayList){
-        this.subFunctList = customSubFunctionalityArrayList;
-    }
-
-    public void setSubFunctionalityAdapter(SubFunctionalityAdapter subFunctionalityAdapter) {
-        this.subFunctionalityAdapter = subFunctionalityAdapter;
-    }
-
-    public SubFunctionalityAdapter getSubFunctionalityAdapter() {
-        return subFunctionalityAdapter;
-    }
 }
