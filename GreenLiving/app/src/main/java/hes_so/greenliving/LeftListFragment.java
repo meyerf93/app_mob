@@ -23,13 +23,13 @@ import hes_so.greenliving.Fuctionality.FunctionalityAdapter;
 public class LeftListFragment extends Fragment {
 
     // déclaration des sous liste de fonctionalité
-    ArrayList<CustomSubFunctionality> subList1;
-    ArrayList<CustomSubFunctionality> subList2;
-    ArrayList<CustomSubFunctionality> subList3;
-    ArrayList<CustomSubFunctionality> subList4;
+    private ArrayList<CustomSubFunctionality> subList1;
+    private ArrayList<CustomSubFunctionality> subList2;
+    private ArrayList<CustomSubFunctionality> subList3;
+    private ArrayList<CustomSubFunctionality> subList4;
 
-    ArrayList<CustomFunctionality> list;
-    ExpandableListView left_list;
+    private ArrayList<CustomFunctionality> list;
+    private ExpandableListView left_list;
 
     String LOG = "sublistLog";
 

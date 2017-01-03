@@ -11,15 +11,13 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
-    <string name="numbers_resume_text">Nombre d'éléments : </string>
+    <string name="numbers_resume_text">Nombre d\'éléments : </string>
     <string name="orientation_resume_west">W : </string>
     <string name="orientation_reusme_east">E : </string>
     <string name="orientation_resume_north">N : </string>
     <string name="orientation_resume_south">S : </string>
 
     <string name="description_resume">Description : </string>
-
-
 
 
 </resources>
