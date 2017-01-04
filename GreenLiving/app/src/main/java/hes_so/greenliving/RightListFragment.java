@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import hes_so.greenliving.Resume.CustomResume;
@@ -32,7 +33,6 @@ public class RightListFragment extends Fragment {
     }
 
     public RightListFragment() {}
-
 
     public ArrayList<CustomResume> getList() {
         return list;

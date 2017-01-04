@@ -3,41 +3,53 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="4">
 
     <ImageView
         android:id="@+id/image_resume"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="@dimen/resume_image_width"
+        android:layout_height="0dp"
+        android:padding="@dimen/reume_image_padding"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"
+        android:layout_weight="1"/>
 
     <TextView
         android:id="@+id/numbers_resume"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:textSize="@dimen/resume_size"
+        android:layout_weight="1"/>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:weightSum="4">
         <TextView
             android:id="@+id/orientation_north_resume"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:textSize="@dimen/resume_size"
             android:layout_weight="1"/>
         <TextView
             android:id="@+id/orientation_south_resume"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:textSize="@dimen/resume_size"
             android:layout_weight="1"/>
         <TextView
             android:id="@+id/orientation_west_resume"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:textSize="@dimen/resume_size"
             android:layout_weight="1"/>
         <TextView
             android:id="@+id/orientation_east_resum"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:textSize="@dimen/resume_size"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -45,7 +57,9 @@
     <TextView
         android:id="@+id/description_resume"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:textSize="@dimen/resume_size"
+        android:layout_weight="1"/>
 
 
 </LinearLayout>

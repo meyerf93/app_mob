@@ -58,7 +58,7 @@ public class LeftListFragment extends Fragment {
         //generate view
         FunctionalityAdapter functionalityAdapter = init_list(list);
         left_list = (ExpandableListView) view.findViewById(R.id.left_list);
-        left_list.setIndicatorBounds(0,40);
+        left_list.setIndicatorBounds(0,100);
         left_list.setAdapter(functionalityAdapter);
         return view;
     }
@@ -83,7 +83,7 @@ public class LeftListFragment extends Fragment {
         list.add(new CustomFunctionality(
                 ((Integer) 1).longValue(),
                 getString(R.string.func_1),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_temperature),
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.temperature),
                 subList1
         ));
         //crée la deuxième sous liste
@@ -92,7 +92,7 @@ public class LeftListFragment extends Fragment {
         list.add(new CustomFunctionality(
                 ((Integer) 2).longValue(),
                 getString(R.string.func_2),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_isolation_3),
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_3),
                 subList2
         ));
         //crée la troisième sous liste
@@ -101,7 +101,7 @@ public class LeftListFragment extends Fragment {
         list.add(new CustomFunctionality(
                 ((Integer) 3).longValue(),
                 getString(R.string.func_3),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_electricity),
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.electricity),
                 subList3
         ));
         //crée la quatrième sous liste
@@ -110,7 +110,7 @@ public class LeftListFragment extends Fragment {
         list.add(new CustomFunctionality(
                 ((Integer) 4).longValue(),
                 getString(R.string.func_4),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_appliances),
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.appliances),
                 subList4
         ));
         //ajoute crée l'adapter pour la liste complète
@@ -124,12 +124,12 @@ public class LeftListFragment extends Fragment {
         subList.add(new CustomSubFunctionality(
                 ((Integer) 1).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_flux)));
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.flux)));
         //ajoute le deuxième éléments a la sous lsite
         subList.add(new CustomSubFunctionality(
                 ((Integer) 2).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_light)));
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.light)));
     }
 
     private void init_sub_isolation(ArrayList<CustomSubFunctionality> subList){
@@ -137,31 +137,31 @@ public class LeftListFragment extends Fragment {
         subList.add(new CustomSubFunctionality(
                 ((Integer) 1).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_isolation_1)));
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_1)));
         //ajoute le deuxième éléments a la sous liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 2).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_isolation_2)));
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_2)));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 3).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_isolation_3)));
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_3)));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 4).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_simple_vitrage)));
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.simple_vitrage)));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 5).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_double_vitrage)));
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.double_vitrage)));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 5).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.ic_triple_vitrage)));
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.triple_vitrage)));
     }
 }

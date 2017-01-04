@@ -9,9 +9,12 @@
     <color name="test_color_2">#66ff0b0b</color>
 
     <color name="bleu_clair">#4AFFE3</color>
+    <color name="bleu_sky">#57b5c9</color>
     <color name="rouge_saumon">#FF4D69</color>
     <color name="jaune">#F5E64D</color>
     <color name="vert">#63FF57</color>
     <color name="bleu_marine">#2445FF</color>
+
+    <color name="grey_background">#c7c7c7</color>
 
 </resources>

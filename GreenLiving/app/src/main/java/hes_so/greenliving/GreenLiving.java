@@ -45,7 +45,6 @@ public class GreenLiving extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_green_living);
 
         fragmentManager = getFragmentManager();
@@ -62,7 +61,7 @@ public class GreenLiving extends FragmentActivity {
 
         right_list_resume = new ArrayList<CustomResume>();
         CustomResume item = new CustomResume(
-                BitmapFactory.decodeResource(getResources(), R.mipmap.ic_triple_vitrage),
+                BitmapFactory.decodeResource(getResources(), R.drawable.triple_vitrage),
                 10,
                 3,
                 4,
@@ -71,7 +70,7 @@ public class GreenLiving extends FragmentActivity {
                 "Pleins de triple vitrage oupi !"
         );
         CustomResume item_2 = new CustomResume(
-                BitmapFactory.decodeResource(getResources(), R.mipmap.ic_double_vitrage),
+                BitmapFactory.decodeResource(getResources(), R.drawable.double_vitrage),
                 20,
                 3,
                 4,
@@ -83,6 +82,8 @@ public class GreenLiving extends FragmentActivity {
         right_list_resume.add(item);
         right_list_resume.add(item_2);
         rightListFragment.setList(right_list_resume);
+
+        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -91,17 +92,17 @@ public class GreenLiving extends FragmentActivity {
 
         final FragmentTransaction ft = fragmentManager.beginTransaction();
 
-
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
 
             ft.add(R.id.left_list_fragment,leftListFragment);
             ft.add(R.id.right_list_fragment,rightListFragment);
-            ft.add(R.id.main_ui_fragment,middleFragment);
+            //ft.add(R.id.main_ui_fragment,middleFragment);
             ft.commit();
         }
         else if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
 
-            ft.add(R.id.main_fragment,leftListFragment);
+            //ft.add(R.id.main_fragment,leftListFragment);
+            ft.add(R.id.main_fragment,rightListFragment);
             ft.commit();
 
         }
@@ -123,7 +124,8 @@ public class GreenLiving extends FragmentActivity {
         }
         else if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
 
-            ft.remove(leftListFragment);
+            //ft.remove(leftListFragment);
+            ft.remove(rightListFragment);
             ft.commit();
 
         }
