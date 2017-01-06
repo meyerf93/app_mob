@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bas_maison">
+
+    <ImageView
+        android:id="@+id/left_third_isolation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/isolation_3"/>
+    <ImageView
+        android:id="@+id/left_second_isolation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/isolation_2"/>
+    <ImageView
+        android:id="@+id/left_first_isolation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/isolation_1"/>
+
+
+    <ImageView
+        android:id="@+id/left_window"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/simple_vitrage"/>
+    <ImageView
+        android:id="@+id/right_window"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/simple_vitrage"/>
+
+
+    <ImageView
+        android:id="@+id/right_second_isolation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/isolation_2"/>
+    <ImageView
+        android:id="@+id/right_third_isolation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/isolation_3"/>
+
+    <ImageView
+        android:id="@+id/right_fist_isolation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/isolation_1"/>
+
+
+</LinearLayout>

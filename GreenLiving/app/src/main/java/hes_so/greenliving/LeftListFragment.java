@@ -4,7 +4,6 @@ import android.app.Fragment;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -92,7 +91,7 @@ public class LeftListFragment extends Fragment {
         list.add(new CustomFunctionality(
                 ((Integer) 2).longValue(),
                 getString(R.string.func_2),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_3),
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_3_small),
                 subList2
         ));
         //crée la troisième sous liste
@@ -137,17 +136,17 @@ public class LeftListFragment extends Fragment {
         subList.add(new CustomSubFunctionality(
                 ((Integer) 1).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_1)));
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_1_small)));
         //ajoute le deuxième éléments a la sous liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 2).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_2)));
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_2_small)));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 3).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_3)));
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_3_small)));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 4).longValue(),

@@ -12,6 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="@dimen/subfunc_image_button_height"
         android:layout_weight="1"
+        android:background="@null"
         tools:ignore="ContentDescription"/>
 
     <ImageView
