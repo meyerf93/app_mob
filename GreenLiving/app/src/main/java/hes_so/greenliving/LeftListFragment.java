@@ -28,7 +28,6 @@ public class LeftListFragment extends Fragment {
     private ArrayList<CustomSubFunctionality> subList4;
 
     private ArrayList<CustomFunctionality> list;
-    private ExpandableListView left_list;
 
     String LOG = "sublistLog";
 
@@ -42,12 +41,12 @@ public class LeftListFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        list = new ArrayList<CustomFunctionality>();
+        list = new ArrayList<>();
 
-        subList1 = new ArrayList<CustomSubFunctionality>();
-        subList2 = new ArrayList<CustomSubFunctionality>();
-        subList3 = new ArrayList<CustomSubFunctionality>();
-        subList4 = new ArrayList<CustomSubFunctionality>();
+        subList1 = new ArrayList<>();
+        subList2 = new ArrayList<>();
+        subList3 = new ArrayList<>();
+        subList4 = new ArrayList<>();
     }
 
     @Nullable
@@ -56,42 +55,39 @@ public class LeftListFragment extends Fragment {
         View view = inflater.inflate(R.layout.left_list_fragment, container,false);
         //generate view
         FunctionalityAdapter functionalityAdapter = init_list(list);
-        left_list = (ExpandableListView) view.findViewById(R.id.left_list);
+        ExpandableListView left_list = (ExpandableListView) view.findViewById(R.id.left_list);
         left_list.setIndicatorBounds(0,100);
         left_list.setAdapter(functionalityAdapter);
         return view;
     }
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-    }
 
     private FunctionalityAdapter init_list(ArrayList<CustomFunctionality> list){
         /* contenu de la liste de fonctionalité
-        <string name="func_1">Chauffage</string>
-        <string name="func_2">Isolation</string>
+        <string name="func_1">Isolation</string>
+        <string name="func_2">Chauffage</string>
         <string name="func_3">Production</string>
         <string name="func_4">Electroménager</string>
         <string name="func_5">Ventilation</string>*/
 
         //crée la première sous liste
 
-        init_sub_list(subList1);
+
+        init_sub_isolation(subList1);
         //ajoute la première fonctionalité custom
         list.add(new CustomFunctionality(
                 ((Integer) 1).longValue(),
                 getString(R.string.func_1),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.temperature),
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_3_small),
                 subList1
         ));
         //crée la deuxième sous liste
-        init_sub_isolation(subList2);
+        init_sub_list(subList2);
         //ajoute la deuxième fonctionalité custom
         list.add(new CustomFunctionality(
                 ((Integer) 2).longValue(),
                 getString(R.string.func_2),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_3_small),
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.temperature),
                 subList2
         ));
         //crée la troisième sous liste
@@ -113,9 +109,7 @@ public class LeftListFragment extends Fragment {
                 subList4
         ));
         //ajoute crée l'adapter pour la liste complète
-        FunctionalityAdapter functionalityAdapter = new FunctionalityAdapter(getContext(),
-                R.layout.custom_func_cell,list);
-        return  functionalityAdapter;
+        return new FunctionalityAdapter(getContext(),R.layout.custom_func_cell,list);
     }
 
     private void init_sub_list(ArrayList<CustomSubFunctionality> subList){
@@ -131,36 +125,38 @@ public class LeftListFragment extends Fragment {
                 BitmapFactory.decodeResource(getContext().getResources(),R.drawable.light)));
     }
 
-    private void init_sub_isolation(ArrayList<CustomSubFunctionality> subList){
-        //ajoute le premier éléments à la sous liste
+    private void init_sub_isolation(ArrayList<CustomSubFunctionality> subList) {
+
+        //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 1).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_1_small)));
-        //ajoute le deuxième éléments a la sous liste
+                BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.simple_vitrage)));
+        //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 2).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_2_small)));
+                BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.double_vitrage)));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 3).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_3_small)));
-        //ajout d'un élément a la liste
+                BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.triple_vitrage)));
+
+        //ajoute le premier éléments à la sous liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 4).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.simple_vitrage)));
-        //ajout d'un élément a la liste
+                BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.isolation_1_small)));
+        //ajoute le deuxième éléments a la sous liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 5).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.double_vitrage)));
+                BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.isolation_2_small)));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
-                ((Integer) 5).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.triple_vitrage)));
+                ((Integer) 6).longValue(),
+                BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.isolation_3_small)));
     }
 }

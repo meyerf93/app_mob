@@ -1,57 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@drawable/bas_maison">
+    android:id="@+id/ui_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <ImageView
+    <ImageButton
         android:id="@+id/left_third_isolation"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@drawable/isolation_3"/>
-    <ImageView
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:layout_marginLeft="@dimen/left_third_isolation_marging"/>
+    <ImageButton
         android:id="@+id/left_second_isolation"
+        android:background="@null"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@drawable/isolation_2"/>
-    <ImageView
+        android:layout_height="wrap_content" />
+    <ImageButton
         android:id="@+id/left_first_isolation"
+        android:background="@null"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@drawable/isolation_1"/>
+        android:layout_height="wrap_content" />
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/left_window"
+        android:background="@null"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:background="@drawable/simple_vitrage"/>
-    <ImageView
+        android:layout_marginLeft="@dimen/window_left_marging"
+        android:layout_marginRight="@dimen/window_right_marging"/>
+    <ImageButton
+        android:id="@+id/midle_window"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+    <ImageButton
         android:id="@+id/right_window"
+        android:background="@null"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:background="@drawable/simple_vitrage"/>
+        android:layout_marginLeft="@dimen/window_right_marging"
+        android:layout_marginRight="@dimen/window_left_marging"/>
 
 
-    <ImageView
+
+    <ImageButton
+        android:id="@+id/right_first_isolation"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageButton
         android:id="@+id/right_second_isolation"
+        android:background="@null"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@drawable/isolation_2"/>
-    <ImageView
+        android:layout_height="wrap_content" />
+    <ImageButton
         android:id="@+id/right_third_isolation"
+        android:background="@null"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@drawable/isolation_3"/>
-
-    <ImageView
-        android:id="@+id/right_fist_isolation"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@drawable/isolation_1"/>
-
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

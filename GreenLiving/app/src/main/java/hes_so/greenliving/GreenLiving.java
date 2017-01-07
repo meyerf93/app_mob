@@ -6,11 +6,11 @@ import android.content.res.Configuration;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 
 import java.util.ArrayList;
 
 import hes_so.greenliving.Resume.CustomResume;
+import hes_so.greenliving.UI.CustomUI;
 
 
 public class GreenLiving extends FragmentActivity {
@@ -20,11 +20,7 @@ public class GreenLiving extends FragmentActivity {
     private boolean MiddleUIFragment = false;
 
 
-    private ArrayList<CustomResume> right_list_resume;
-
     private LeftListFragment leftListFragment;
-    private LeftListFragment middleFragment;
-   // private LeftListFragment rightListFragment;
     private MainUIFragment mainUIFragment;
     private RightListFragment rightListFragment;
 
@@ -35,14 +31,6 @@ public class GreenLiving extends FragmentActivity {
     private static final String TAG = "GreenLiving";
 
 
-    public ArrayList<CustomResume> getRight_list_resume() {
-        return right_list_resume;
-    }
-
-    public void setRight_list_resume(ArrayList<CustomResume> right_list_resume) {
-        this.right_list_resume = right_list_resume;
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_green_living);
@@ -51,15 +39,13 @@ public class GreenLiving extends FragmentActivity {
 
         leftListFragment = new LeftListFragment();
 
-        middleFragment = new LeftListFragment();
-
-        Log.v(LOG,"before create right fragment");
+        mainUIFragment = new MainUIFragment();
 
         rightListFragment = new RightListFragment();
 
-        Log.v(LOG,"after create right fragement");
 
-        right_list_resume = new ArrayList<CustomResume>();
+        // Init the right list for fragment
+        ArrayList<CustomResume> right_list_resume = new ArrayList<>();
         CustomResume item = new CustomResume(
                 BitmapFactory.decodeResource(getResources(), R.drawable.triple_vitrage),
                 10,
@@ -82,7 +68,42 @@ public class GreenLiving extends FragmentActivity {
         right_list_resume.add(item);
         right_list_resume.add(item_2);
         rightListFragment.setList(right_list_resume);
+        //------------------------------------------------------------------------------------------
+        ArrayList<CustomUI> first_middle_list_ui = new ArrayList<>();
+        CustomUI item1 = new CustomUI(
+                BitmapFactory.decodeResource(getResources(),R.drawable.haut_maison),
+                null,true,
+                null,true,
+                null,true,
 
+                BitmapFactory.decodeResource(getResources(),R.drawable.double_vitrage),true,
+                BitmapFactory.decodeResource(getResources(),R.drawable.triple_vitrage),true,
+                null,true,
+
+                null,false,
+                null,false,
+                null,true
+        );
+
+        CustomUI item2 = new CustomUI(
+                BitmapFactory.decodeResource(getResources(),R.drawable.bas_maison),
+
+                BitmapFactory.decodeResource(getResources(),R.drawable.isolation_3),true,
+                BitmapFactory.decodeResource(getResources(),R.drawable.isolation_2),true,
+                BitmapFactory.decodeResource(getResources(),R.drawable.isolation_1),true,
+
+                BitmapFactory.decodeResource(getResources(),R.drawable.simple_vitrage),true,
+                BitmapFactory.decodeResource(getResources(),R.drawable.double_vitrage),false,
+                BitmapFactory.decodeResource(getResources(),R.drawable.triple_vitrage),true,
+
+                BitmapFactory.decodeResource(getResources(),R.drawable.isolation_1),true,
+                BitmapFactory.decodeResource(getResources(),R.drawable.isolation_2),true,
+                BitmapFactory.decodeResource(getResources(),R.drawable.isolation_3),true
+        );
+        //------------------------------------------------------------------------------------------
+        first_middle_list_ui.add(item1);
+        first_middle_list_ui.add(item2);
+        mainUIFragment.setFirstlist(first_middle_list_ui);
         super.onCreate(savedInstanceState);
     }
 
@@ -96,13 +117,14 @@ public class GreenLiving extends FragmentActivity {
 
             ft.add(R.id.left_list_fragment,leftListFragment);
             ft.add(R.id.right_list_fragment,rightListFragment);
-            //ft.add(R.id.main_ui_fragment,middleFragment);
+            ft.add(R.id.main_ui_fragment,mainUIFragment);
             ft.commit();
         }
         else if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
 
             //ft.add(R.id.main_fragment,leftListFragment);
-            ft.add(R.id.main_fragment,rightListFragment);
+            //ft.add(R.id.main_fragment,rightListFragment);
+            ft.add(R.id.main_fragment,mainUIFragment);
             ft.commit();
 
         }
@@ -119,13 +141,14 @@ public class GreenLiving extends FragmentActivity {
 
             ft.remove(leftListFragment);
             ft.remove(rightListFragment);
-            ft.remove(middleFragment);
+            ft.remove(mainUIFragment);
             ft.commit();
         }
         else if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
 
-            //ft.remove(leftListFragment);
+            ft.remove(leftListFragment);
             ft.remove(rightListFragment);
+            ft.remove(mainUIFragment);
             ft.commit();
 
         }

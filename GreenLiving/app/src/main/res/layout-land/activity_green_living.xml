@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:background="@drawable/paysage"
-    android:weightSum="4">
+    android:weightSum="4"
+    android:baselineAligned="false">
 
     <FrameLayout
         android:id="@+id/left_list_fragment"

@@ -2,15 +2,12 @@ package hes_so.greenliving.Fuctionality;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -27,7 +24,6 @@ public class FunctionalityAdapter extends BaseExpandableListAdapter {// ArrayAda
     private ArrayList<CustomFunctionality> funcList;
     private Context context;
     private int viewRes;
-    private Resources res;
 
     private String LOG = "FunAdapter";
 
@@ -37,7 +33,7 @@ public class FunctionalityAdapter extends BaseExpandableListAdapter {// ArrayAda
         this.funcList = funcList;
         this.context = context;
         this.viewRes = textViewRessourceId;
-        this.res = context.getResources();
+        Resources res = context.getResources();
     }
 
     @Override
@@ -45,11 +41,10 @@ public class FunctionalityAdapter extends BaseExpandableListAdapter {// ArrayAda
         View view = convertView;
 
         if(view == null){
-            if(view == null){
                 LayoutInflater layoutInflater = (LayoutInflater)
-                        context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-                view = layoutInflater.inflate(R.layout.custom_func_cell,parent,false);
-            }
+                        context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                view = layoutInflater.inflate(viewRes,parent,false);
+
         }
 
         TextView func_title = (TextView) view.findViewById(R.id.func_tittle);
@@ -71,7 +66,7 @@ public class FunctionalityAdapter extends BaseExpandableListAdapter {// ArrayAda
 
         if(view ==null){
             LayoutInflater layoutInflater = (LayoutInflater)
-                    context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+                    context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = layoutInflater.inflate(R.layout.custom_sub_func_cell,parent,false);
         }
 
@@ -120,15 +115,12 @@ public class FunctionalityAdapter extends BaseExpandableListAdapter {// ArrayAda
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        CustomSubFunctionality item = funcList.get(groupPosition)
-                .getSubFunctList().get(childPosition);
-        return item;
+        return funcList.get(groupPosition).getSubFunctList().get(childPosition);
     }
 
     @Override
     public Object getGroup(int groupPosition) {
-        CustomFunctionality item = funcList.get(groupPosition);
-        return item;
+        return funcList.get(groupPosition);
     }
 
     @Override

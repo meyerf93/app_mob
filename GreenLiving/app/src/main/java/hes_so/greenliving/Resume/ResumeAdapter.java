@@ -2,19 +2,16 @@ package hes_so.greenliving.Resume;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.util.Log;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import hes_so.greenliving.Fuctionality.CustomSubFunctionality;
 import hes_so.greenliving.R;
 
 /**
@@ -26,7 +23,6 @@ public class ResumeAdapter extends ArrayAdapter<CustomResume> {
     private ArrayList<CustomResume> customResumesList;
     private Context context;
     private int viewRes;
-    private Resources res;
 
     private String LOG = "resume_adapter";
 
@@ -36,11 +32,11 @@ public class ResumeAdapter extends ArrayAdapter<CustomResume> {
         this.customResumesList = customResumesList;
         this.context = context;
         this.viewRes = textViewRessourceId;
-        this.res = context.getResources();
+        Resources res = context.getResources();
     }
-
+    @NonNull
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView,@NonNull ViewGroup parent) {
 
         View view = convertView;
         if(view == null){
@@ -52,7 +48,6 @@ public class ResumeAdapter extends ArrayAdapter<CustomResume> {
         final CustomResume customResume = customResumesList.get(position);
         if(customResume != null){
             final ImageView image = (ImageView) view.findViewById(R.id.image_resume);
-            if(image ==null) Log.v(LOG,"IMAGE est null");
             image.setImageBitmap(customResume.getImageResume());
 
             final TextView numbers = (TextView) view.findViewById(R.id.numbers_resume);

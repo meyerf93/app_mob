@@ -1,7 +1,6 @@
 package hes_so.greenliving;
 
 import android.app.Fragment;
-import android.app.ListFragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -10,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 import hes_so.greenliving.Resume.CustomResume;
@@ -23,9 +21,6 @@ import hes_so.greenliving.Resume.ResumeAdapter;
 public class RightListFragment extends Fragment {
 
     private ArrayList<CustomResume> list;
-    private ListView right_list;
-
-    private String LOG = "rightFragment_log";
 
 
     interface OnRightListFragmentInteractionListener{
@@ -39,6 +34,7 @@ public class RightListFragment extends Fragment {
     }
 
     public void setList(ArrayList<CustomResume> list) {
+        String LOG = "rightFragment_log";
         Log.v(LOG,"set list right fragment");
 
         this.list = list;
@@ -63,7 +59,7 @@ public class RightListFragment extends Fragment {
         View view = inflater.inflate(R.layout.right_list_fragment, container,false);
 
         ResumeAdapter resumeAdapter = new ResumeAdapter(getContext(),R.layout.custom_resume,list);
-        right_list = (ListView) view.findViewById(R.id.right_list);
+        ListView right_list = (ListView) view.findViewById(R.id.right_list);
         right_list.setAdapter(resumeAdapter);
         return view;
     }
