@@ -6,6 +6,7 @@ import android.content.res.Configuration;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -46,7 +47,7 @@ public class GreenLiving extends FragmentActivity {
 
         // Init the right list for fragment
         ArrayList<CustomResume> right_list_resume = new ArrayList<>();
-        CustomResume item = new CustomResume(
+        final CustomResume item = new CustomResume(
                 BitmapFactory.decodeResource(getResources(), R.drawable.triple_vitrage),
                 10,
                 3,
@@ -55,12 +56,12 @@ public class GreenLiving extends FragmentActivity {
                 1,
                 "Pleins de triple vitrage oupi !"
         );
-        CustomResume item_2 = new CustomResume(
+        final CustomResume item_2 = new CustomResume(
                 BitmapFactory.decodeResource(getResources(), R.drawable.double_vitrage),
                 20,
                 3,
                 4,
-                10,
+                1,
                 3,
                 "Pleins de fenêtre oupi !"
         );
@@ -70,45 +71,49 @@ public class GreenLiving extends FragmentActivity {
         rightListFragment.setList(right_list_resume);
         //------------------------------------------------------------------------------------------
         ArrayList<CustomUI> first_middle_list_ui = new ArrayList<>();
-        CustomUI item1 = new CustomUI(
-                BitmapFactory.decodeResource(getResources(),R.drawable.haut_maison),
-                null,true,
+        /*final CustomUI item1 = new CustomUI(
+                BitmapFactory.decodeResource(getResources(),R.drawable.bas_maison),
+                null,false,
                 null,true,
                 null,true,
 
                 BitmapFactory.decodeResource(getResources(),R.drawable.double_vitrage),true,
-                BitmapFactory.decodeResource(getResources(),R.drawable.triple_vitrage),true,
+                null,false,
                 null,true,
 
+                null,true,
                 null,false,
-                null,false,
-                null,true
-        );
+                null,false
+        ); */
 
-        CustomUI item2 = new CustomUI(
+        final CustomUI item2 = new CustomUI(
                 BitmapFactory.decodeResource(getResources(),R.drawable.bas_maison),
 
                 BitmapFactory.decodeResource(getResources(),R.drawable.isolation_3),true,
                 BitmapFactory.decodeResource(getResources(),R.drawable.isolation_2),true,
                 BitmapFactory.decodeResource(getResources(),R.drawable.isolation_1),true,
 
-                BitmapFactory.decodeResource(getResources(),R.drawable.simple_vitrage),true,
+                BitmapFactory.decodeResource(getResources(),R.drawable.simple_vitrage),false,
                 BitmapFactory.decodeResource(getResources(),R.drawable.double_vitrage),false,
-                BitmapFactory.decodeResource(getResources(),R.drawable.triple_vitrage),true,
+                BitmapFactory.decodeResource(getResources(),R.drawable.triple_vitrage),false,
 
                 BitmapFactory.decodeResource(getResources(),R.drawable.isolation_1),true,
                 BitmapFactory.decodeResource(getResources(),R.drawable.isolation_2),true,
                 BitmapFactory.decodeResource(getResources(),R.drawable.isolation_3),true
         );
         //------------------------------------------------------------------------------------------
-        first_middle_list_ui.add(item1);
+        //first_middle_list_ui.add(item1);
         first_middle_list_ui.add(item2);
         mainUIFragment.setFirstlist(first_middle_list_ui);
+        Log.v(LOG,"on get view called");
+
         super.onCreate(savedInstanceState);
     }
 
     @Override
     protected void onResume() {
+        Log.v(LOG,"on resume called");
+
         super.onResume();
 
         final FragmentTransaction ft = fragmentManager.beginTransaction();

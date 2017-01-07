@@ -40,6 +40,8 @@ public class UIAdapter extends ArrayAdapter<CustomUI> {
     @NonNull
     @Override
     public View getView(int position, View convertView,@NonNull ViewGroup parent) {
+        Log.v("UI_adapter","on ui adapter called");
+
 
         View view = convertView;
         if(view == null){
@@ -53,7 +55,7 @@ public class UIAdapter extends ArrayAdapter<CustomUI> {
             final LinearLayout background = (LinearLayout) view.findViewById(R.id.ui_background);
             background.setBackground(new BitmapDrawable(res,customUI.getUiBackground()));
 
-            // Left isonaltion -------------------------------------------------------------------------------------------------
+            // Left isolation -------------------------------------------------------------------------------------------------
             final ImageButton leftThirdIsolation = (ImageButton) view.findViewById(R.id.left_third_isolation);
             if(customUI.getLeftThirdIsolation() != null) leftThirdIsolation.setImageBitmap(customUI.getLeftThirdIsolation());
             if(!customUI.isLeftThirdIsolationVisible()) leftThirdIsolation.setVisibility(View.INVISIBLE);
@@ -70,7 +72,10 @@ public class UIAdapter extends ArrayAdapter<CustomUI> {
 
             // Window ------------------------------------------------------------------------------------------------------------
             final ImageButton leftWindow = (ImageButton) view.findViewById(R.id.left_window);
-            if(customUI.getLeftWindow() != null) leftWindow.setImageBitmap(customUI.getLeftWindow());
+            if(customUI.getLeftWindow() != null) {
+                Log.v("COUCOU","LEFT WINWDOW NOT NULL");
+                leftWindow.setImageBitmap(customUI.getLeftWindow());
+            }
             if(!customUI.isLeftWindowVisible()) leftWindow.setVisibility(View.INVISIBLE);
 
             final ImageButton middleWindow = (ImageButton) view.findViewById(R.id.midle_window);

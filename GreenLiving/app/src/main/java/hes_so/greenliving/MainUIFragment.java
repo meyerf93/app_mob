@@ -3,6 +3,7 @@ package hes_so.greenliving;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +26,6 @@ public class MainUIFragment extends Fragment {
         void OnMainUIFragmentInteraction(int index);
     }
 
-
     public MainUIFragment() {}
 
     // Getter/setter -------------------------------------------------------------------------------
@@ -43,6 +43,7 @@ public class MainUIFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.v("Main_fragment_ui","on create view called");
         View view = inflater.inflate(R.layout.main_ui_fragment,container,false);
 
         UIAdapter firstUiAdapter = new UIAdapter(getContext(),R.layout.custom_ui,firstlist);
