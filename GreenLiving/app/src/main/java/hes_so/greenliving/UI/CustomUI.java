@@ -34,6 +34,10 @@ public class CustomUI {
     private boolean rightSecondIsolationVisible;
     private boolean rightFirstIsolationVisible;
 
+    private int leftTypeWindow;
+    private int middleTypeWindow;
+    private int rightTypeWindow;
+
 
     public CustomUI (Bitmap uiBackground,
                      Bitmap leftThirdIsolation, Boolean leftThirdIsolationVisible,
@@ -44,7 +48,8 @@ public class CustomUI {
                      Bitmap rightWindow,Boolean rightWindowVisible,
                      Bitmap rightFirstIsolation, Boolean rightFirstIsolationVisible,
                      Bitmap rightSecondIsolation, Boolean rightSecondIsolationVisible,
-                     Bitmap rightThirdIsolation, Boolean rightThirdIsolationVisible){
+                     Bitmap rightThirdIsolation, Boolean rightThirdIsolationVisible,
+                     int leftTypeWindow, int middleTypeWindow, int rightTypeWindow){
 
         this.uiBackground = uiBackground;
 
@@ -74,6 +79,11 @@ public class CustomUI {
         this.rightFirstIsolationVisible = rightFirstIsolationVisible;
         this.rightSecondIsolationVisible = rightSecondIsolationVisible;
         this.rightThirdIsolationVisible = rightThirdIsolationVisible;
+        //------------------------------------------------------------------------------------------
+        // Type of window   ------------------------------------------------------------------------
+        this.leftTypeWindow = leftTypeWindow;
+        this.middleTypeWindow = middleTypeWindow;
+        this.rightTypeWindow = rightTypeWindow;
         //------------------------------------------------------------------------------------------
     }
 
@@ -235,4 +245,31 @@ public class CustomUI {
 
     //----------------------------------------------------------------------------------------------
 
+    // Getter/setter type of window-----------------------------------------------------------------
+
+    public int getLeftTypeWindow() {
+        return leftTypeWindow;
+    }
+
+    public void setLeftTypeWindow(int leftTypeWindow) {
+        this.leftTypeWindow = leftTypeWindow;
+    }
+
+    public int getMiddleTypeWindow() {
+        return middleTypeWindow;
+    }
+
+    public void setMiddleTypeWindow(int middleTypeWindow) {
+        this.middleTypeWindow = middleTypeWindow;
+    }
+
+    public int getRightTypeWindow() {
+        return rightTypeWindow;
+    }
+
+    public void setRightTypeWindow(int rightTypeWindow) {
+        this.rightTypeWindow = rightTypeWindow;
+    }
+
+    //----------------------------------------------------------------------------------------------
 }

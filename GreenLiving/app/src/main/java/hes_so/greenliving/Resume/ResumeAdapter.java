@@ -1,7 +1,6 @@
 package hes_so.greenliving.Resume;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +31,6 @@ public class ResumeAdapter extends ArrayAdapter<CustomResume> {
         this.customResumesList = customResumesList;
         this.context = context;
         this.viewRes = textViewRessourceId;
-        Resources res = context.getResources();
     }
     @NonNull
     @Override

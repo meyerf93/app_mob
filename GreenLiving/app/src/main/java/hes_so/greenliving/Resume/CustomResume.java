@@ -54,6 +54,8 @@ public class CustomResume {
     }
 
     public void setNorthResume(int northResume) {
+        if(northResume > this.northResume) numberResume += northResume-this.northResume;
+        else numberResume -=this.northResume-northResume;
         this.northResume = northResume;
     }
 
@@ -62,6 +64,8 @@ public class CustomResume {
     }
 
     public void setSouthResume(int southResume) {
+        if(southResume > this.southResume) numberResume += southResume-this.southResume;
+        else numberResume -=this.southResume-southResume;
         this.southResume = southResume;
     }
 
@@ -70,6 +74,8 @@ public class CustomResume {
     }
 
     public void setWestResume(int westResume) {
+        if(westResume > this.westResume) numberResume += westResume-this.westResume;
+        else numberResume -=this.westResume-westResume;
         this.westResume = westResume;
     }
 
@@ -78,6 +84,8 @@ public class CustomResume {
     }
 
     public void setEastResume(int eastResume) {
+        if(eastResume> this.eastResume) numberResume += eastResume-this.eastResume;
+        else numberResume -= this.eastResume-eastResume;
         this.eastResume = eastResume;
     }
 

@@ -10,12 +10,20 @@ public class CustomSubFunctionality {
 
     //parameter for sub functionality
     private long id;
-    private Bitmap subFuncButton;
+    private Bitmap subFuncButtonLeftAdd;
+    private Bitmap subFuncButtonLeftRemove;
     private Bitmap subFunctPicture;
+    private Bitmap subFuncButtonRightAdd;
+    private Bitmap subFuncButtonRightRemove;
 
-    public CustomSubFunctionality(long id,Bitmap subFuncButton, Bitmap subFunctPicture){
+    public CustomSubFunctionality(long id,Bitmap subFuncButtonLeftAdd, Bitmap subFuncButtonLeftRemove,
+                                  Bitmap subFunctPicture,
+                                  Bitmap subFuncButtonRightAdd, Bitmap subFuncButtonRightRemove){
         this.id = id;
-        this.subFuncButton = subFuncButton;
+        this.subFuncButtonLeftAdd = subFuncButtonLeftAdd;
+        this.subFuncButtonLeftRemove = subFuncButtonLeftRemove;
+        this.subFuncButtonRightAdd = subFuncButtonRightAdd;
+        this.subFuncButtonRightRemove = subFuncButtonRightRemove;
         this.subFunctPicture = subFunctPicture;
     }
 
@@ -27,13 +35,39 @@ public class CustomSubFunctionality {
         return id;
     }
 
-    public Bitmap getSubFuncButton() {
-        return subFuncButton;
+    //button getter/setter--------------------------------------------------------------------------
+    public Bitmap getSubFuncButtonLeftAdd() {
+        return subFuncButtonLeftAdd;
     }
 
-    public void setSubFuncButton(Bitmap subFuncButton) {
-        this.subFuncButton = subFuncButton;
+    public void setSubFuncButtonLeftAdd(Bitmap subFuncButtonLeftAdd) {
+        this.subFuncButtonLeftAdd = subFuncButtonLeftAdd;
     }
+
+    public Bitmap getSubFuncButtonLeftRemove() {
+        return subFuncButtonLeftRemove;
+    }
+
+    public void setSubFuncButtonLeftRemove(Bitmap subFuncButtonLeftRemove) {
+        this.subFuncButtonLeftRemove = subFuncButtonLeftRemove;
+    }
+
+    public Bitmap getSubFuncButtonRightAdd() {
+        return subFuncButtonRightAdd;
+    }
+
+    public void setSubFuncButtonRightAdd(Bitmap subFuncButtonRightAdd) {
+        this.subFuncButtonRightAdd = subFuncButtonRightAdd;
+    }
+
+    public Bitmap getSubFuncButtonRightRemove() {
+        return subFuncButtonRightRemove;
+    }
+
+    public void setSubFuncButtonRightRemove(Bitmap subFuncButtonRightRemove) {
+        this.subFuncButtonRightRemove = subFuncButtonRightRemove;
+    }
+    //----------------------------------------------------------------------------------------------
 
     public Bitmap getSubFunctPicture(){
         return subFunctPicture;

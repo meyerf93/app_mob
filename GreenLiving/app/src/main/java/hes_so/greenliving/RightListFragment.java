@@ -3,7 +3,6 @@ package hes_so.greenliving;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,8 +33,6 @@ public class RightListFragment extends Fragment {
     }
 
     public void setList(ArrayList<CustomResume> list) {
-        String LOG = "rightFragment_log";
-        Log.v(LOG,"set list right fragment");
 
         this.list = list;
     }

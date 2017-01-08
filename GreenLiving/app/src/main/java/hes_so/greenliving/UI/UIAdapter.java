@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.BitmapDrawable;
 import android.support.annotation.NonNull;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,9 +39,6 @@ public class UIAdapter extends ArrayAdapter<CustomUI> {
     @NonNull
     @Override
     public View getView(int position, View convertView,@NonNull ViewGroup parent) {
-        Log.v("UI_adapter","on ui adapter called");
-
-
         View view = convertView;
         if(view == null){
             LayoutInflater layoutInflater = (LayoutInflater)
@@ -73,7 +69,6 @@ public class UIAdapter extends ArrayAdapter<CustomUI> {
             // Window ------------------------------------------------------------------------------------------------------------
             final ImageButton leftWindow = (ImageButton) view.findViewById(R.id.left_window);
             if(customUI.getLeftWindow() != null) {
-                Log.v("COUCOU","LEFT WINWDOW NOT NULL");
                 leftWindow.setImageBitmap(customUI.getLeftWindow());
             }
             if(!customUI.isLeftWindowVisible()) leftWindow.setVisibility(View.INVISIBLE);

@@ -7,13 +7,29 @@
     android:padding="@dimen/subfunc_layout_padding"
     android:layout_weight="2">
 
-    <ImageButton
-        android:id="@+id/sub_func_button"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="0dp"
-        android:layout_height="@dimen/subfunc_image_button_height"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="@null"
-        tools:ignore="ContentDescription"/>
+        android:weightSum="2">
+
+        <ImageButton
+            android:id="@+id/sub_func_button_left_add"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/subfunc_image_button_height"
+            android:layout_weight="1"
+            android:background="@null"
+            tools:ignore="ContentDescription"/>
+        <ImageButton
+            android:id="@+id/sub_func_button_left_remove"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/subfunc_image_button_height"
+            android:layout_weight="1"
+            android:background="@null"
+            tools:ignore="ContentDescription"/>
+
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/sub_func_image"
@@ -21,5 +37,28 @@
         android:layout_height="@dimen/subfunc_image_height"
         android:layout_weight="1"
         android:contentDescription=""/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:weightSum="2">
+
+        <ImageButton
+            android:id="@+id/sub_func_button_right_add"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/subfunc_image_button_height"
+            android:layout_weight="1"
+            android:background="@null"
+            tools:ignore="ContentDescription"/>
+        <ImageButton
+            android:id="@+id/sub_func_button_right_remove"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/subfunc_image_button_height"
+            android:layout_weight="1"
+            android:background="@null"
+            tools:ignore="ContentDescription"/>
+    </LinearLayout>
 
 </LinearLayout>

@@ -7,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -27,12 +26,12 @@ public class LeftListFragment extends Fragment {
     public static final int PRODUCTION_INDEX = 3;
     public static final int ELECTROMENAGER_INDEX =4;
 
-    public static final int SIMPLE_VITRAGE_INDEX = 1;
-    public static final int DOUBLE_VITRAGE_INDEX = 2;
-    public static final int TRIPLE_VITRAGE_INDEX = 3;
-    public static final int SIMPLE_ISOLATION_INDEX = 4;
-    public static final int DOUBLE_ISOLATION_INDEX = 5;
-    public static final int TRIPLE_ISOLATION_INDEX = 6;
+    public static final int SIMPLE_VITRAGE = 1;
+    public static final int DOUBLE_VITRAGE = 2;
+    public static final int TRIPLE_VITRAGE = 3;
+    public static final int SIMPLE_ISOLATION = 4;
+    public static final int DOUBLE_ISOLATION = 5;
+    public static final int TRIPLE_ISOLATION = 6;
 
     // déclaration des sous liste de fonctionalité
     private ArrayList<CustomSubFunctionality> subList1;
@@ -73,12 +72,9 @@ public class LeftListFragment extends Fragment {
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition,
                                         int childPosition, long id) {
-
-
                 return false;
             }
         });
-
 
         return view;
     }
@@ -138,47 +134,87 @@ public class LeftListFragment extends Fragment {
         //ajoute le premier éléments à la sous liste
         subList.add(new CustomSubFunctionality(
                 ((Integer) 1).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.flux)));
+                /*BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements),*/
+                null,
+                null,
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.flux),
+                null,
+                null
+                /*BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements)*/
+        ));
         //ajoute le deuxième éléments a la sous lsite
         subList.add(new CustomSubFunctionality(
                 ((Integer) 2).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.light)));
+                /*BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements),*/
+                null,
+                null,
+                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.light),
+                null,
+                null
+                /*BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements)*/
+        ));
     }
 
     private void init_sub_isolation(ArrayList<CustomSubFunctionality> subList) {
 
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
-                ((Integer) SIMPLE_VITRAGE_INDEX).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.simple_vitrage)));
+                ((Integer) SIMPLE_VITRAGE).longValue(),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements),
+                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.simple_vitrage),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements)
+        ));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
-                ((Integer) DOUBLE_VITRAGE_INDEX).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.double_vitrage)));
+                ((Integer) DOUBLE_VITRAGE).longValue(),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements),
+                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.double_vitrage),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements)
+        ));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
-                ((Integer) TRIPLE_VITRAGE_INDEX).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.triple_vitrage)));
+                ((Integer) TRIPLE_VITRAGE).longValue(),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements),
+                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.triple_vitrage),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements)
+        ));
 
         //ajoute le premier éléments à la sous liste
         subList.add(new CustomSubFunctionality(
-                ((Integer) SIMPLE_ISOLATION_INDEX).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.isolation_1_small)));
+                ((Integer) SIMPLE_ISOLATION).longValue(),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements),
+                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.isolation_1_small),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements)
+        ));
         //ajoute le deuxième éléments a la sous liste
         subList.add(new CustomSubFunctionality(
-                ((Integer) DOUBLE_ISOLATION_INDEX).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.isolation_2_small)));
+                ((Integer) DOUBLE_ISOLATION).longValue(),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements),
+                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.isolation_2_small),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements)
+        ));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
-                ((Integer) TRIPLE_ISOLATION_INDEX).longValue(),
-                BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
-                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.isolation_3_small)));
+                ((Integer) TRIPLE_ISOLATION).longValue(),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements),
+                BitmapFactory.decodeResource(getContext().getResources(), R.drawable.isolation_3_small),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.add_elements),
+                BitmapFactory.decodeResource(getContext().getResources(),R.mipmap.remove_elements)
+        ));
     }
 }
