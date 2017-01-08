@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ExpandableListView;
 
 import java.util.ArrayList;
@@ -21,6 +22,18 @@ import hes_so.greenliving.Fuctionality.FunctionalityAdapter;
 
 public class LeftListFragment extends Fragment {
 
+    public static final int ISOLATION_INDEX = 1;
+    public static final int CHAUFFAGE_INDEX = 2;
+    public static final int PRODUCTION_INDEX = 3;
+    public static final int ELECTROMENAGER_INDEX =4;
+
+    public static final int SIMPLE_VITRAGE_INDEX = 1;
+    public static final int DOUBLE_VITRAGE_INDEX = 2;
+    public static final int TRIPLE_VITRAGE_INDEX = 3;
+    public static final int SIMPLE_ISOLATION_INDEX = 4;
+    public static final int DOUBLE_ISOLATION_INDEX = 5;
+    public static final int TRIPLE_ISOLATION_INDEX = 6;
+
     // déclaration des sous liste de fonctionalité
     private ArrayList<CustomSubFunctionality> subList1;
     private ArrayList<CustomSubFunctionality> subList2;
@@ -30,10 +43,6 @@ public class LeftListFragment extends Fragment {
     private ArrayList<CustomFunctionality> list;
 
     String LOG = "sublistLog";
-
-    interface OnLeftListFragmentInteractionListener{
-        void OnLeftListFragmentInteraction(int index);
-    }
 
     public LeftListFragment() {}
 
@@ -58,6 +67,19 @@ public class LeftListFragment extends Fragment {
         ExpandableListView left_list = (ExpandableListView) view.findViewById(R.id.left_list);
         left_list.setIndicatorBounds(0,100);
         left_list.setAdapter(functionalityAdapter);
+
+        left_list.setOnChildClickListener(new ExpandableListView.OnChildClickListener(){
+
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition,
+                                        int childPosition, long id) {
+
+
+                return false;
+            }
+        });
+
+
         return view;
     }
 
@@ -70,22 +92,22 @@ public class LeftListFragment extends Fragment {
         <string name="func_4">Electroménager</string>
         <string name="func_5">Ventilation</string>*/
 
-        //crée la première sous liste
-
-
+        //initialise la première sous liste
         init_sub_isolation(subList1);
+
         //ajoute la première fonctionalité custom
         list.add(new CustomFunctionality(
-                ((Integer) 1).longValue(),
-                getString(R.string.func_1),
-                BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_3_small),
-                subList1
+        ((Integer) ISOLATION_INDEX).longValue(),
+        getString(R.string.func_1),
+        BitmapFactory.decodeResource(getContext().getResources(),R.drawable.isolation_3_small),
+        subList1
         ));
+
         //crée la deuxième sous liste
         init_sub_list(subList2);
         //ajoute la deuxième fonctionalité custom
         list.add(new CustomFunctionality(
-                ((Integer) 2).longValue(),
+                ((Integer) CHAUFFAGE_INDEX).longValue(),
                 getString(R.string.func_2),
                 BitmapFactory.decodeResource(getContext().getResources(),R.drawable.temperature),
                 subList2
@@ -94,7 +116,7 @@ public class LeftListFragment extends Fragment {
         init_sub_list(subList3);
         //ajoute la troisième fonctionalité customs
         list.add(new CustomFunctionality(
-                ((Integer) 3).longValue(),
+                ((Integer) PRODUCTION_INDEX).longValue(),
                 getString(R.string.func_3),
                 BitmapFactory.decodeResource(getContext().getResources(),R.drawable.electricity),
                 subList3
@@ -103,7 +125,7 @@ public class LeftListFragment extends Fragment {
         init_sub_list(subList4);
         //ajoute la troisième fonctionalité customs
         list.add(new CustomFunctionality(
-                ((Integer) 4).longValue(),
+                ((Integer) ELECTROMENAGER_INDEX).longValue(),
                 getString(R.string.func_4),
                 BitmapFactory.decodeResource(getContext().getResources(),R.drawable.appliances),
                 subList4
@@ -129,33 +151,33 @@ public class LeftListFragment extends Fragment {
 
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
-                ((Integer) 1).longValue(),
+                ((Integer) SIMPLE_VITRAGE_INDEX).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
                 BitmapFactory.decodeResource(getContext().getResources(), R.drawable.simple_vitrage)));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
-                ((Integer) 2).longValue(),
+                ((Integer) DOUBLE_VITRAGE_INDEX).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
                 BitmapFactory.decodeResource(getContext().getResources(), R.drawable.double_vitrage)));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
-                ((Integer) 3).longValue(),
+                ((Integer) TRIPLE_VITRAGE_INDEX).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
                 BitmapFactory.decodeResource(getContext().getResources(), R.drawable.triple_vitrage)));
 
         //ajoute le premier éléments à la sous liste
         subList.add(new CustomSubFunctionality(
-                ((Integer) 4).longValue(),
+                ((Integer) SIMPLE_ISOLATION_INDEX).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
                 BitmapFactory.decodeResource(getContext().getResources(), R.drawable.isolation_1_small)));
         //ajoute le deuxième éléments a la sous liste
         subList.add(new CustomSubFunctionality(
-                ((Integer) 5).longValue(),
+                ((Integer) DOUBLE_ISOLATION_INDEX).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
                 BitmapFactory.decodeResource(getContext().getResources(), R.drawable.isolation_2_small)));
         //ajout d'un élément a la liste
         subList.add(new CustomSubFunctionality(
-                ((Integer) 6).longValue(),
+                ((Integer) TRIPLE_ISOLATION_INDEX).longValue(),
                 BitmapFactory.decodeResource(getContext().getResources(), R.mipmap.add_elements),
                 BitmapFactory.decodeResource(getContext().getResources(), R.drawable.isolation_3_small)));
     }

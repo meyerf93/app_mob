@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import hes_so.greenliving.GreenLiving;
+import hes_so.greenliving.LeftListFragment;
 import hes_so.greenliving.R;
 
 
@@ -27,6 +29,12 @@ public class FunctionalityAdapter extends BaseExpandableListAdapter {// ArrayAda
 
     private String LOG = "FunAdapter";
 
+    public static final int MSG_ADD = 1;
+    public static final int MSG_REMOVE = 2;
+
+    public interface OnLeftAdapterIntecationListener{
+        void OnLeftAdapterInteraction(int command, long listItemId, long listSubItemId);
+    }
 
     public FunctionalityAdapter(Context context, int textViewRessourceId,
                                 ArrayList<CustomFunctionality> funcList){
@@ -60,7 +68,7 @@ public class FunctionalityAdapter extends BaseExpandableListAdapter {// ArrayAda
     }
 
     @Override
-    public View getChildView(int groupPosition, int childPosition,
+    public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
         View view = convertView;
 
@@ -73,11 +81,24 @@ public class FunctionalityAdapter extends BaseExpandableListAdapter {// ArrayAda
         ImageView sub_func_button = (ImageButton) view.findViewById(R.id.sub_func_button);
         ImageView sub_func_image = (ImageView) view.findViewById(R.id.sub_func_image);
 
-        CustomSubFunctionality item = funcList.get(groupPosition)
-                .getSubFunctList().get(childPosition);
+        final CustomFunctionality Item = funcList.get(groupPosition);
+        final CustomSubFunctionality SubItem = Item.getSubFunctList().get(childPosition);
 
-        sub_func_button.setImageBitmap(item.getSubFuncButton());
-        sub_func_image.setImageBitmap(item.getSubFunctPicture());
+        sub_func_button.setImageBitmap(SubItem.getSubFuncButton());
+        sub_func_image.setImageBitmap(SubItem.getSubFunctPicture());
+
+        //add listener to ImageButton---------------------------------------------------------------
+        sub_func_button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                GreenLiving mainActivity = (GreenLiving) context;
+                mainActivity.OnLeftAdapterInteraction(FunctionalityAdapter.MSG_ADD, Item.getId(),
+                        SubItem.getId());
+            }
+        });
+
+        //------------------------------------------------------------------------------------------
 
         return view;
     }
