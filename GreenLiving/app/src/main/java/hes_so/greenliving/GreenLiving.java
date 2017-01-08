@@ -388,7 +388,7 @@ public class GreenLiving extends FragmentActivity
                             case FunctionalityAdapter.MSG_REMOVE_LEFT:
                                 if(temp_item_5.getWestResume() != 0){
                                     temp_item_5.setWestResume(temp_item_5.getWestResume()-1);
-                                    if(temp_item_5.getEastResume() == 0)
+                                    if(temp_item_5.getWestResume() == 0)
                                         item_main_ui.setLeftThirdIsolationVisible(false);
                                 }
                                 break;
